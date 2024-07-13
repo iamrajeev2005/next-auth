@@ -1,24 +1,26 @@
 import React from 'react'
+import Link from 'next/link';
 
 const signup = () => {
   return (
     <div className="min-h-screen w-screen bg-blue-400 flex items-center justify-center">
-      <div className="min-h-[70vh] w-[25vw] bg-white rounded-lg">
+      <div className="min-h-fit w-[25vw] bg-white rounded-lg pb-10">
         <h1 className="text-center text-3xl mt-5">Signup</h1>
-        <form action="">
-          <div>
-            <label htmlFor="username">Username</label>
-            <input type="text" name="" id="" />
+        <form className='px-6' action="">
+          <div className='flex flex-col mt-5 outline-none'>
+            <label htmlFor="username">Username:</label>
+            <input className='border-[1px] border-blue-500 rounded-md py-1 px-1' type="text" name="" id="" />
           </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="text" name="" id="" />
+          <div className='flex flex-col mt-5 outline-none'>
+            <label htmlFor="email">Email:</label>
+            <input className='border-[1px] border-blue-500 rounded-md py-1 px-1' type="text" name="" id="" />
           </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input type="text" name="" id="" />
+          <div className='flex flex-col mt-5 outline-none'>
+            <label htmlFor="password">Password:</label>
+            <input className='border-[1px] border-blue-500 rounded-md py-1 px-1' type="text" name="" id="" />
           </div>
-          <button>Sign Up</button>
+          <button className='mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500'>Sign Up</button>
+          <p className='text-md text-center'>Already have an account ? <Link className='text-blue-800 hover:underline' href={"/login"}>Login</Link></p>
         </form>
       </div>
     </div>
