@@ -13,6 +13,8 @@ const signup = () => {
   useEffect(() => {
     if(user.email && user.password && user.username){
       setDisabled(false)
+    } else {
+      setDisabled(true)
     }
     console.log(user)
   }, [user]);
